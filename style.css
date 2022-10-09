@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+body {
+    background-image: linear-gradient(80deg, white, rgb(202, 202, 202));
+}
+
+.container {
+    margin: 2rem auto;
+    width: 45%;
+    padding: 1rem 2rem;
+    box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px,
+        rgb(0 0 0 / 30%) 0px 30px 60px -30px,
+        rgb(10 37 64 / 35%) 0px -2px 6px 0px;
+    background-color: rgb(228, 224, 224);
+    border-radius: 2rem;
+}
+
+h1 {
+    color: darkblue;
+    text-align: center;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.todoinput {
+    margin: 2em 0em;
+}
+
+input,
+button {
+    border: 0.1em solid #eeeeee;
+    border-radius: 0.5em;
+}
+
+::placeholder {
+    font-style: italic;
+}
+
+#text {
+    width: 100%;
+    padding: 0.5em;
+    font-size: 1em;
+}
+
+#button {
+    width: 100%;
+    background-color: darkblue;
+    padding: 0.5em;
+    font-size: 1em;
+    color: white;
+    cursor: pointer;
+    border: 0.1em solid #eeeeee;
+}
+
+#button:hover {
+    background-color: white;
+    color: blue;
+}
+
+.noTache {
+    text-align: center;
+}
+
+.todolist {
+    margin-top: 2rem;
+}
+
+.todolist>div {
+    background-color: white;
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 0.5em;
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.2);
+}
+
+.todos {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem;
+    padding: 1rem 2rem;
+    border: 0.1rem solid #eeeeee;
+    border-radius: .5rem;
+    transition: all 0.7s ease;
+
+}
+
+.todos>input[type="checkbox"]:checked~span {
+    text-decoration: line-through;
+    color: grey;
+    opacity: 0.3;
+}
+
+.todos>.delete {
+    display: flex;
+    justify-content: end;
+}
+
+.delete {
+    color: darkblue;
+    cursor: pointer;
+}
+
+.delete:hover {
+    color: red;
+}
+
+.fall {
+    transform: translateY(12rem) rotate(20deg);
+    opacity: 0;
+}
+
+
+
+@media screen and (max-width: 395px) {
+
+    h1 {
+        margin-left: -1rem;
+    }
+
+    .todos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media screen and (max-width: 260px) {
+
+    h1 {
+        margin-left: -1.5rem;
+    }
+
+    .todos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
